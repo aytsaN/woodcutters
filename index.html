@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Woodcutter VS Zombies</title>
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Underdog&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<section class="wpapper-landing show" id="wpapperLanding">
+    <h1>дровосеки VS зомби</h1>
+    <div>
+        <figure>
+            <img src="assets/img/landing/boy.jpe" alt="" width="200">
+            <img src="assets/img/landing/girl.jpe" alt="" width="200">
+        </figure>
+        <figure>
+            <img src="assets/img/landing/battle.jpe" alt="" width="500">
+            <img src="assets/img/landing/task.jpe" alt="" width="500">
+        </figure>
+    </div>
+    <div class="btn btn-start" id="btnStart">Играть</div>
+    <small class="author"><a href="https://github.com/aytsaN">https://github.com/aytsaN</a></small>
+</section>
+
+<section class="wrapper-character " id="wrapperCharacter">
+    <aside>
+        <div class="character-player" id="characterPlayer">
+            <img src="assets/img/player-1/hair.png" alt="" class="plr player-hair">
+            <img src="assets/img/player-1/head.png" alt="" class="plr player-head">
+            <img src="assets/img/player-1/rightArm.png" alt="" class="plr player-rightArm">
+            <img src="assets/img/player-1/torso.png" alt="" class="plr player-torso">
+            <img src="assets/img/player-1/leftArm.png" alt="" class="plr player-leftArm">
+            <img src="assets/img/player-1/legs.png" alt="" class="plr player-legs">
+        </div>
+        <div class="btn-play" id="btnPlay">защищать лес</div>
+    </aside>
+    <div class="setting" id="setting">
+        <div class="game-heading">
+            <p>дровосеки</p>
+            <p>vs зомби</p>
+        </div>
+        <div class="info">
+            <lable class="setting-txt">Назови себя</lable>
+            <input type="text" class="setting-input" id="settingInput" placeholder="ТУТ">
+            <div class="sexes" id="sexes">
+                <p class="sexes-heading">Ты предвадитель</p>
+                <label for="men">
+                    <input name="sex" type="radio" id="men" value="1" checked>мальчишек
+                </label>
+                <label for="women">
+                    <input name="sex" type="radio" id="women" value="2">девчонок
+                </label>
+            </div>
+        </div>
+    </div>
+    <audio src="assets/audio/bgm-character.ogg" id="bgmCharacter"></audio>
+</section>
+
+<section class="wrapper-fields " id="wrapperFields">
+    <div class="life-bars">
+        <div class="player-bar">
+            <p class="player-name" id="playerName"></p>
+            <div class="bar player-life red">
+                <span id="plrStatus" style="width: 100%"></span>
+            </div>
+        </div>
+        <div class="zombie-bar">
+            <p class="zombie-name" id="zombieName"></p>
+            <div class="bar zombie-life z-red">
+                <span id="zombieStatus" style="width: 100%"></span>
+            </div>
+        </div>
+    </div>
+    <div class="battle-field" id="battleField">
+        <div class="rival player" id="player"></div>
+        <div class="weapon-path" id="weaponPath">
+            <img src="assets/img/weapon/weapon-1.png" alt="" class="img-weapon" id="imgWeapon">
+        </div>
+        <div class="rival zombie " id="zombie"></div>
+    </div>
+    <div class="footnote"></div>
+    <audio src="assets/audio/bgm-battle.mp3" id="bgmBattle"></audio>
+    <audio src="assets/audio/shooting.flac" id="shooting"></audio>
+    <audio src="assets/audio/zombie-attack.wav" id="zombieAttackSound"></audio>
+    <audio src="assets/audio/zombie-life-down.wav" id="zombieLifeSound"></audio>
+    <audio src="assets/audio/plr-life-down.flac" id="plrLifeDown"></audio>
+    <audio src="assets/audio/plr-life-up.wav" id="plrLifeUp"></audio>
+    <audio src="assets/audio/laugh-evil.ogg" id="laugh"></audio>
+    <audio src="assets/audio/game-over.mp3" id="gameOver"></audio>
+</section>
+
+<div class="table-weapon unshow" id="tableWeapon">
+    <div class="weapon-1" id="weapon-1">
+        <img src="assets/img/weapon/weapon-1.png" alt="" title="kill zombie">
+    </div>
+    <div class="weapon-2" id="weapon-2">
+        <img src="assets/img/weapon/weapon-2.png" alt="" title="health up">
+    </div>
+    <div class="weapon-3" id="weapon-3">
+        <img src="#" alt="" title="">
+    </div>
+</div>
+
+<div class="table-task unshow" id="tableTask">
+    <div class="task-container" id="taskContainer"></div>
+    <div class="btn-fire" id="btnFire">ПРИМЕНИТЬ</div>
+</div>
+
+<div class="table-score unshow" id="tableScore">
+    <p>твой лучший раз:  <span id="bestScoreField"></span></p>
+    <p>твой последнйи результат:  <span id="currentScoreField"></span></p>
+    <div id="btnAgain">попытаться вновь..</div>
+</div>
+
+<script src="js/scripts.js"></script>
+</body>
+</html>

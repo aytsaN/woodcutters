@@ -1,0 +1,537 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    user-select: none;
+}
+
+img {
+    -webkit-user-drag: none;
+}
+
+body {
+    background: #000;
+}
+
+section {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.unshow {
+    display: none;
+}
+
+.show {
+    display: flex;
+}
+
+.wpapper-landing {
+    background: #111;
+    color: #eee;
+}
+
+.wpapper-landing h1 {
+    font-size: 90px;
+    padding-bottom: 40px;
+}
+
+.wpapper-landing div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.wpapper-landing figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 180px;
+}
+
+.wpapper-landing>div {
+    padding: 30px 0;
+    font-size: 40px;
+}
+
+.btn {
+    display: flex;
+    font-size: 30px;
+    padding: 20px;
+    justify-content: center;
+    cursor: pointer;
+    align-self: flex-start;
+    margin-left: 40px;
+    padding: 5px 15px;
+}
+
+.btn:hover {
+   opacity: .6;
+}
+
+small {
+    align-self: flex-end;
+}
+
+small a {
+    color: #eee;
+    font-size: 30px;
+}
+
+/*---------------------------------------------------------*/
+
+.wrapper-character {
+    background-image: url("../assets/img/bg-landing.JPG");
+    background-position: center;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+aside {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.character-player {
+    height: 200px;
+    width: 140px;
+    position: relative;
+    top: 90px;
+}
+
+.plr {
+    position: absolute;
+}
+
+.player-hair {
+    z-index: 3;
+}
+
+.player-head {
+    z-index: 2;
+    top: 16px;
+    left: 27px;
+}
+
+.player-rightArm {
+    top: 93px;
+    left: 20px;
+    z-index: 3;
+}
+
+.player-torso {
+    z-index: 1;
+    top: 90px;
+    left: 31px;
+}
+
+.player-leftArm {
+    top: 101px;
+    left: 76px;
+    z-index: 0;
+}
+
+.player-legs {
+    top: 140px;
+    left: 31px;
+}
+
+.btn-play {
+    height: 100px;
+    width: 200px;
+    padding: 8px 0;
+    background-image: url(../assets/img/btn-play.png);
+    background-position: center;
+    background-size: contain;
+    font-family: 'Amatic SC', cursive;
+    color: #000;
+    font-weight: 700;
+    font-size: 38px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.btn-play:hover {
+    font-size: 39px;
+    width: 205px;
+    margin-right: -5px;
+}
+
+.setting {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 600px;
+    height: 700px;
+    background-image: url("../assets/img/bg-info.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Amatic SC', cursive;
+    color: #000;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.game-heading {
+    height: 50%;
+    text-align: center;
+    padding-top: 69px;
+    font-size: 72px;
+}
+
+.setting .info {
+    height: 50%;
+    font-size: 50px;
+    margin-top: -45px;
+    font-weight: 700;
+}
+
+.setting-txt {
+    margin-right: 11px;
+}
+input {
+    outline: none;
+}
+
+.setting-input {
+    font-family: 'Amatic SC', cursive;
+    background-color: rgba(255,255,255,.2);
+    width: 320px;
+    height: 48px;
+    font-weight: 700;
+    border-bottom: 5px solid #000;
+    font-size: 43px;
+}
+
+.setting-input::-webkit-input-placeholder {
+    font-family: 'Amatic SC', cursive;
+    color: #000;
+}
+
+.sexes {
+    padding-top: 32px;
+}
+
+label {
+    cursor: pointer;
+}
+
+label[for="men"] {
+    margin-right: 20px;
+}
+
+/*---------------------------------------------------------*/
+
+.wrapper-fields {
+    flex-direction: column;
+    background-color: #231308;
+    background-image: url("../assets/img/bg-fields.jpg");
+    background-repeat-y: no-repeat;
+    background-size: auto;
+    background-position-y: -330px;
+}
+
+.life-bars {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.bar {
+    background-color: #1a1a1a;
+    height: 25px;
+    padding: 5px;
+    width: 350px;
+    margin: 30px 0;
+    border-radius: 5px;
+    box-shadow: 0 1px 5px #000 inset, 0 1px 0 #444;
+}
+
+.bar span {
+    display: flex;
+    height: 100%;
+    background-color: #777;
+    border-radius: 3px;
+    box-shadow: 0 0 1px 1px rgba(255, 255, 255, .5) inset;
+    transition: width .4s ease-in-out;
+}
+
+.red span {
+    background-color: #df5245;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#df4339), to(#a93e2e));
+}
+
+.z-red span {
+   // background-color: #a93e2e;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#a93e2e), to(#df4339));
+}
+
+.zombie-name,
+.player-name {
+    font-family: 'Underdog', cursive;
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0 20px;
+    text-shadow: -4px 0px 19px rgba(220, 232, 64, 1);
+    color: #d7d7e0;
+}
+
+.zombie-life {
+    transform: rotate(180deg);
+}
+
+.zombie-name {
+    text-align: right;
+}
+
+.battle-field {
+    width: 90%;
+    height: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.weapon-path {
+    width: 800px;
+}
+
+.img-weapon {
+    position: relative;
+    display: none;
+    width: 80px;
+}
+
+.shoot {
+    display: inline-flex;
+    animation: shooting 1s;
+}
+
+@keyframes shooting {
+    from
+    {
+        transform: rotate(0deg);
+        left: 0px;
+    }
+    to {
+        transform: rotate(700deg);
+        left: 800px;
+    }
+}
+
+.rival {
+    height: 200px;
+    width: 140px;
+    position: relative;
+}
+
+.zombie {
+    position: relative;
+}
+
+.z-attack {
+    animation: attacking 1s;
+}
+
+@keyframes attacking {
+    from
+    {
+        left: 0px;
+    }
+    to {
+        left: -1000px;
+    }
+}
+
+.zombie img,
+.player img{
+    position: absolute;
+}
+
+.zombie-hair {
+    z-index: 3;
+    top: 4px;
+    left: 30px;
+}
+
+.zombie-head {
+    z-index: 2;
+    top: 17px;
+    left: 30px;
+}
+
+.zombie-rightArm {
+    z-index: 3;
+    top: 101px;
+    left: 61px;
+}
+
+.zombie-torso {
+    left: 58px;
+    top: 91px;
+    z-index: 1;
+}
+
+.zombie-leftArm {
+    top: 102px;
+    left: 21px;
+}
+
+.zombie-legs {
+    top: 141px;
+    left: 33px;
+}
+
+.countdown {
+    position: absolute;
+    left: 44%;
+    top: 30%;
+    font-size: 350px;
+    color: #6a000b;
+    -webkit-text-stroke: 2px #d01d10;
+    text-shadow: 0px 0px 23px rgba(163, 27, 27, 1);
+}
+
+/*---------------------------------------------------------*/
+
+.table-weapon {
+    position: absolute;
+    align-items: flex-end;
+    top: 0;
+    left: 27%;
+    width: 65%;
+    height: 70%;
+    /* background: red; */
+    background-image: url("../assets/img/table-weapon.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.table-weapon img {
+    cursor: pointer;
+}
+
+.weapon-2 {
+    padding-bottom: 60px;
+}
+
+.weapon-3 {
+    width: 30%;
+}
+
+.weapon-1 img {
+    width: 60%;
+}
+
+.weapon-2 img {
+    width: 30%;
+}
+
+.weapon-1 img:hover {
+    width: 65%;
+}
+
+.weapon-2 img:hover {
+    width: 40%;
+}
+
+.table-task {
+    position: absolute;
+    top: 15vh;
+    left: 5vw;
+    background-image: url("../assets/img/table-task-2.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 90vw;
+    height: 70vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+}
+
+.task-container span,
+.task-container input {
+background: white;
+    margin-right: 20px;
+    padding: 10px;
+    font-size: 30px;
+    box-shadow: inset 0px 0px 2px 3px rgba(176,176,176,1);
+}
+
+.task-container input {
+    width: 60px;
+}
+
+.btn-fire {
+    cursor: pointer;
+    font-size: 40px;
+    font-weight: 700;
+    margin-top: 50px;
+    background: rgba(255,255,255,.4);
+    border-radius: 40px;
+    padding: 10px 40px ;
+}
+
+.btn-fire:hover {
+    color: #3e0008;
+    margin-top: 38px;
+    font-size: 50px;
+}
+
+/*---------------------------------------------------------*/
+
+.table-score {
+    position: absolute;
+    top: 15vh;
+    left: 5vw;
+    background-image: url("../assets/img/table-task-3.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 90vw;
+    height: 70vh;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 5;
+    font-size: 60px;
+    font-family: 'Amatic SC', cursive;
+}
+
+.table-score p {
+    padding-top: 40px;
+    margin-left: 120px;
+}
+
+.table-score span {
+    font-size: 65px;
+    font-weight: 700;
+}
+
+.table-score div {
+    cursor: pointer;
+    padding-top: 80px;
+    margin-left: 120px;
+}
+
+.table-score div:hover {
+    margin-top: -5px;
+    font-size: 65px;
+    font-weight: 700;
+    padding-top: 79px;
+}
