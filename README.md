@@ -1,1 +1,3 @@
-# https://aytsan.github.io/
+# Simple Math Game
+
+Demo: https://aytsan.github.io/woodcutters/
